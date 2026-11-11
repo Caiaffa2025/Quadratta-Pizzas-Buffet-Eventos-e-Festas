@@ -1,0 +1,1894 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quadratta Pizzas Eventos e Festas | Buffet de Pizza Artesanal no Seu Evento</title>
+    <meta name="description" content="Buffet de pizza artesanal redonda feito ao vivo em eventos, casamentos, aniversários e confraternizações corporativas. Levamos fornos profissionais e estrutura completa." />
+    <meta property="og:title" content="Quadratta Pizzas Eventos e Festas | Buffet de Pizza Artesanal" />
+    <meta property="og:description" content="O autêntico rodízio de pizza artesanal assada na hora na sua festa. Levamos toda a estrutura, fornos e pizzaiolos." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#121212" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: '#121212',
+                darker: '#0a0a0a',
+                card: '#181818',
+                surface: '#222222',
+                border: '#2e2e2e',
+                red: '#C8322B',
+                redHover: '#b02a24',
+                gold: '#D4AF37',
+                goldLight: '#f3cf5a',
+                goldHover: '#b89426',
+                cream: '#FAF6EE',
+                muted: '#9e998e',
+              },
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+              serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            },
+            boxShadow: {
+              goldGlow: '0 0 25px -5px rgba(212, 175, 55, 0.35)',
+              redGlow: '0 0 25px -5px rgba(200, 50, 43, 0.45)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Smooth transitions & custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #121212;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2e2e2e;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D4AF37;
+      }
+      .gold-gradient-text {
+        background: linear-gradient(135deg, #FFF0BE 0%, #D4AF37 50%, #AA820A 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .red-gradient-btn {
+        background: linear-gradient(135deg, #E03B33 0%, #C8322B 60%, #9C1F19 100%);
+      }
+      .red-gradient-btn:hover {
+        background: linear-gradient(135deg, #EC443C 0%, #D4342D 60%, #AB231D 100%);
+      }
+      /* Accordion transition helper */
+      .faq-answer {
+        transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-out;
+      }
+      /* Custom slider styling */
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #D4AF37;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        border: 2px solid #ffffff;
+      }
+      input[type=range]::-moz-range-thumb {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #D4AF37;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        border: 2px solid #ffffff;
+      }
+    </style>
+  </head>
+  <body class="bg-brand-dark text-brand-cream font-sans antialiased selection:bg-brand-red selection:text-white">
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-red via-[#a1241e] to-brand-red text-white text-xs sm:text-sm font-medium py-2 px-4 text-center border-b border-red-950/40 tracking-wide">
+      <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+        <span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
+        <span>Agenda 2026/2027 aberta para aniversários, casamentos e confraternizações corporativas!</span>
+        <a href="#simulador" class="hidden sm:inline-block underline font-semibold ml-2 text-brand-cream hover:text-white">Calcular prévia &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+        <!-- Logo Brand -->
+        <a href="#" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-red to-brand-card border border-brand-red/50 flex items-center justify-center text-brand-gold shadow-md">
+            <!-- Pizza Slice / Fire Icon -->
+            <svg class="w-6 h-6 transform group-hover:scale-110 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 11h.01"></path>
+              <path d="M11 15h.01"></path>
+              <path d="M16 16h.01"></path>
+              <path d="m2 16 20 6-6-20A20 20 0 0 0 2 16Z"></path>
+              <path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"></path>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white flex items-center gap-1.5">
+              QUADRATTA
+              <span class="text-brand-red text-base font-sans font-bold">PIZZAS</span>
+            </span>
+            <span class="text-[10px] tracking-widest uppercase text-brand-gold/90 font-semibold">Buffet de Eventos & Festas</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-brand-cream/80">
+          <a href="#diferenciais" class="hover:text-brand-gold transition-colors whitespace-nowrap">Diferenciais</a>
+          <a href="#como-funciona" class="hover:text-brand-gold transition-colors whitespace-nowrap">Como Funciona</a>
+          <a href="#cardapios" class="hover:text-brand-gold transition-colors whitespace-nowrap">Cardápios & Sabores</a>
+          <a href="#simulador" class="hover:text-brand-gold transition-colors whitespace-nowrap">Simulador</a>
+          <a href="#depoimentos" class="hover:text-brand-gold transition-colors whitespace-nowrap">Depoimentos</a>
+          <a href="#faq" class="hover:text-brand-gold transition-colors whitespace-nowrap">Dúvidas</a>
+        </nav>
+
+        <!-- Primary CTA Header -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a
+            href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20o%20Buffet%20da%20Quadratta%20Pizzas."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="red-gradient-btn text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-lg shadow-redGlow hover:shadow-red-600/40 transition-all duration-200 flex items-center gap-2 border border-brand-red/40 whitespace-nowrap"
+          >
+            <!-- WhatsApp Icon -->
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+            <span>Orçamento no WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          aria-label="Abrir menu de navegação"
+          class="md:hidden p-2 rounded-lg text-brand-cream/90 hover:text-white hover:bg-brand-card transition-colors focus:outline-none"
+        >
+          <svg id="menu-icon-bars" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Navigation -->
+      <div id="mobile-menu" class="hidden md:hidden bg-brand-darker border-b border-brand-border px-4 pt-3 pb-6 space-y-3">
+        <a href="#diferenciais" class="mobile-nav-link block py-2 text-base font-medium text-brand-cream/90 hover:text-brand-gold border-b border-brand-surface">Diferenciais</a>
+        <a href="#como-funciona" class="mobile-nav-link block py-2 text-base font-medium text-brand-cream/90 hover:text-brand-gold border-b border-brand-surface">Como Funciona</a>
+        <a href="#cardapios" class="mobile-nav-link block py-2 text-base font-medium text-brand-cream/90 hover:text-brand-gold border-b border-brand-surface">Cardápios & Sabores</a>
+        <a href="#simulador" class="mobile-nav-link block py-2 text-base font-medium text-brand-cream/90 hover:text-brand-gold border-b border-brand-surface">Simulador de Evento</a>
+        <a href="#depoimentos" class="mobile-nav-link block py-2 text-base font-medium text-brand-cream/90 hover:text-brand-gold border-b border-brand-surface">Depoimentos</a>
+        <a href="#faq" class="mobile-nav-link block py-2 text-base font-medium text-brand-cream/90 hover:text-brand-gold border-b border-brand-surface">Perguntas Frequentes</a>
+        <div class="pt-3">
+          <a
+            href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20o%20Buffet%20da%20Quadratta%20Pizzas."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="red-gradient-btn text-white text-center font-semibold w-full py-3 rounded-lg shadow-redGlow flex items-center justify-center gap-2"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+            <span>Pedir Orçamento no WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. HERO SECTION -->
+      <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-16 lg:py-24">
+        <!-- Background Photography with Scrim Overlay -->
+        <div class="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=2000&q=80"
+            alt="Pizza artesanal redonda saindo do forno com queijo derretido e manjericão"
+            referrerpolicy="no-referrer"
+            class="w-full h-full object-cover object-center scale-105 filter brightness-[0.38] contrast-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/85 to-brand-dark/50"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(18,18,18,0.7)_100%)]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <!-- Kicker Tagline (Unboxed text with bullet separators) -->
+          <div class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider uppercase text-brand-gold mb-6 bg-brand-surface/70 px-4 py-1.5 rounded-full border border-brand-gold/30 backdrop-blur-sm">
+            <span>Buffet Itinerante Premium</span>
+            <span aria-hidden="true">·</span>
+            <span>Fornos a 450°C</span>
+            <span aria-hidden="true">·</span>
+            <span>Massa 48h de Fermentação</span>
+          </div>
+
+          <!-- Main Impactful Headline -->
+          <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white max-w-5xl mx-auto leading-[1.15] text-balance">
+            A Verdadeira Experiência da
+            <span class="gold-gradient-text block sm:inline"> Pizzaria Artesanal </span>
+            no Seu Evento
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="mt-6 text-base sm:text-lg lg:text-xl text-brand-cream/80 max-w-3xl mx-auto font-normal leading-relaxed text-balance">
+            Levamos nossa estrutura completa, fornos profissionais de alta temperatura e mestres pizzaiolos até a sua casa, condomínio, sítio ou empresa. Pizzas redondas assadas na hora, fatiadas e servidas à vontade para seus convidados.
+          </p>
+
+          <!-- Primary & Secondary CTAs -->
+          <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md sm:max-w-xl mx-auto">
+            <a
+              href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Quadratta%20Pizzas%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20minha%20festa."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full sm:w-auto red-gradient-btn text-white text-base sm:text-lg font-bold px-8 py-4 rounded-xl shadow-redGlow hover:scale-[1.02] active:scale-[0.99] transition-all duration-200 flex items-center justify-center gap-3 border border-red-500/30 group"
+            >
+              <svg class="w-6 h-6 fill-current text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+              </svg>
+              <span>Solicitar Orçamento no WhatsApp</span>
+            </a>
+
+            <a
+              href="#simulador"
+              class="w-full sm:w-auto bg-brand-card hover:bg-brand-surface text-brand-cream border border-brand-border hover:border-brand-gold/60 text-base font-semibold px-6 py-4 rounded-xl transition-all duration-200 flex items-center justify-center gap-2"
+            >
+              <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+              <span>Simular Meu Evento</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Strip (4 Pillars) -->
+          <div class="mt-14 pt-8 border-t border-white/10 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-left">
+            <div class="flex items-center gap-3 bg-brand-dark/40 backdrop-blur-sm p-3 rounded-lg border border-white/5">
+              <div class="w-10 h-10 rounded-lg bg-brand-red/20 text-brand-red flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xs sm:text-sm font-semibold text-white">Fornos até 450°C</h4>
+                <p class="text-[11px] text-brand-cream/60">Pizzas assadas em 90s</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 bg-brand-dark/40 backdrop-blur-sm p-3 rounded-lg border border-white/5">
+              <div class="w-10 h-10 rounded-lg bg-brand-gold/20 text-brand-gold flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xs sm:text-sm font-semibold text-white">Fermentação 48h</h4>
+                <p class="text-[11px] text-brand-cream/60">Digestão leve e crocante</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 bg-brand-dark/40 backdrop-blur-sm p-3 rounded-lg border border-white/5">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xs sm:text-sm font-semibold text-white">Sua Cozinha Intacta</h4>
+                <p class="text-[11px] text-brand-cream/60">Cuidamos de tudo e limpamos</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 bg-brand-dark/40 backdrop-blur-sm p-3 rounded-lg border border-white/5">
+              <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xs sm:text-sm font-semibold text-white">+350 Eventos</h4>
+                <p class="text-[11px] text-brand-cream/60">Avaliação 5.0 estrelas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. POR QUE A QUADRATTA? (Diferenciais) -->
+      <section id="diferenciais" class="py-20 lg:py-28 bg-brand-darker relative border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Heading -->
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs sm:text-sm font-bold tracking-widest text-brand-gold uppercase">Diferenciais Exclusivos</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3 text-balance">
+              Por Que Escolher o Buffet da Quadratta?
+            </h2>
+            <p class="text-base sm:text-lg text-brand-cream/75 mt-4 text-balance">
+              Não levamos apenas comida, levamos o espetáculo da autêntica cozinha italiana para o seu espaço com máxima organização, requinte e pontualidade.
+            </p>
+          </div>
+
+          <!-- 4 Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            <!-- Card 1 -->
+            <div class="bg-brand-card p-7 rounded-2xl border border-brand-border hover:border-brand-gold/50 transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between">
+              <div>
+                <div class="w-14 h-14 rounded-xl bg-brand-red/10 border border-brand-red/30 text-brand-red flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <!-- Pizza Round Icon -->
+                  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m4.93 4.93 4.24 4.24"></path>
+                    <path d="m14.83 9.17 4.24-4.24"></path>
+                    <path d="m14.83 14.83 4.24 4.24"></path>
+                    <path d="m9.17 14.83-4.24 4.24"></path>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-white mb-3">Pizzas Redondas & Artesanais</h3>
+                <p class="text-sm text-brand-cream/70 leading-relaxed">
+                  Massas abertas e moldadas na hora, fermentação lenta de 48 horas que não pesa no estômago, molho de tomate pelati italiano e queijos nobres selecionados.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-brand-border/60 text-xs text-brand-gold font-medium">
+                Textura crocante com borda aerada
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-brand-card p-7 rounded-2xl border border-brand-border hover:border-brand-gold/50 transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between">
+              <div>
+                <div class="w-14 h-14 rounded-xl bg-brand-gold/10 border border-brand-gold/30 text-brand-gold flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <!-- Oven & Chef Gear Icon -->
+                  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                    <path d="M7 9h10"></path>
+                    <path d="M7 13h10"></path>
+                    <path d="M10 17h4"></path>
+                  </svg>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-white mb-3">Estrutura Completa</h3>
+                <p class="text-sm text-brand-cream/70 leading-relaxed">
+                  Levamos fornos portáteis de alta performance, bancadas higiênicas em aço inox, pás de pizza, pratos, guardanapos e equipe treinada e uniformizada.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-brand-border/60 text-xs text-brand-gold font-medium">
+                Você não se preocupa com nada
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-brand-card p-7 rounded-2xl border border-brand-border hover:border-brand-gold/50 transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between">
+              <div>
+                <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <!-- Sparkle / Clean Icon -->
+                  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                  </svg>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-white mb-3">Sem Sujeira no Seu Espaço</h3>
+                <p class="text-sm text-brand-cream/70 leading-relaxed">
+                  Sua cozinha continua impecável. Realizamos o preparo na nossa estação independente e, ao final do evento, limpamos 100% da área utilizada.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-brand-border/60 text-xs text-emerald-400 font-medium">
+                Aproveite a festa como convidado
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-brand-card p-7 rounded-2xl border border-brand-border hover:border-brand-gold/50 transition-all duration-300 hover:-translate-y-1 group flex flex-col justify-between">
+              <div>
+                <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-400 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <!-- Menu / Recipe Icon -->
+                  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
+                    <path d="M8 7h6"></path>
+                    <path d="M8 11h8"></path>
+                  </svg>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-white mb-3">Cardápios Campeões</h3>
+                <p class="text-sm text-brand-cream/70 leading-relaxed">
+                  As pizzas campeãs que mais têm pedidos e aprovação em eventos, criações especiais gourmet e sobremesas irresistíveis feitas na hora.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-brand-border/60 text-xs text-brand-gold font-medium">
+                Sabores comprovados de alto sucesso
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Spotlight Banner -->
+          <div class="mt-14 bg-gradient-to-r from-brand-card via-brand-surface to-brand-card rounded-2xl p-6 sm:p-10 border border-brand-border flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="max-w-2xl">
+              <span class="text-xs font-bold text-brand-red uppercase tracking-wider">Apresentação ao Vivo</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">O Rodízio Que Encanta os Convidados</h3>
+              <p class="text-brand-cream/75 text-sm sm:text-base mt-2">
+                O ritual de abrir a massa fresca na hora, colocar os recheios nobres e assar a pizza ao vivo vira uma atração gastronômica inesquecível no seu evento.
+              </p>
+            </div>
+            <a
+              href="#simulador"
+              class="red-gradient-btn text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-redGlow whitespace-nowrap hover:scale-105 transition-all"
+            >
+              Simular Valores do Evento
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. COMO FUNCIONA (Passo a Passo) -->
+      <section id="como-funciona" class="py-20 lg:py-28 bg-brand-dark relative border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Heading -->
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs sm:text-sm font-bold tracking-widest text-brand-gold uppercase">Simplicidade & Conveniência</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3 text-balance">
+              Como Funciona Nosso Buffet Itinerante
+            </h2>
+            <p class="text-base sm:text-lg text-brand-cream/75 mt-4 text-balance">
+              Em apenas 3 passos simples, transformamos qualquer espaço em uma pizzaria profissional com atendimento impecável.
+            </p>
+          </div>
+
+          <!-- Steps Grid with Connecting Line Style -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            <!-- Step 1 -->
+            <div class="relative bg-brand-card/90 p-8 rounded-2xl border border-brand-border hover:border-brand-gold/40 transition-colors">
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-serif text-4xl sm:text-5xl font-black text-brand-red/90">01</span>
+                <div class="w-10 h-10 rounded-full bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-white mb-3">Escolha o Cardápio & Data</h3>
+              <p class="text-sm text-brand-cream/70 leading-relaxed">
+                Você define a data do evento, nos informa a estimativa de convidados e escolhe a combinação perfeita de sabores tradicionais, gourmet e doces.
+              </p>
+              <ul class="mt-5 space-y-2 text-xs text-brand-cream/60">
+                <li class="flex items-center gap-2">
+                  <span class="text-brand-gold font-bold">✓</span> Atendimento consultivo rápido
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-brand-gold font-bold">✓</span> Reserva de data simplificada
+                </li>
+              </ul>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="relative bg-brand-card/90 p-8 rounded-2xl border border-brand-border hover:border-brand-gold/40 transition-colors">
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-serif text-4xl sm:text-5xl font-black text-brand-gold">02</span>
+                <div class="w-10 h-10 rounded-full bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-white mb-3">Montamos a Estrutura no Local</h3>
+              <p class="text-sm text-brand-cream/70 leading-relaxed">
+                Chegamos com 1h30 de antecedência com fornos portáteis, bancada em aço inox e insumos frescos. Só precisamos de uma tomada comum e 2x2m de espaço plano.
+              </p>
+              <ul class="mt-5 space-y-2 text-xs text-brand-cream/60">
+                <li class="flex items-center gap-2">
+                  <span class="text-brand-gold font-bold">✓</span> Casas, salões, empresas ou sítios
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-brand-gold font-bold">✓</span> Montagem rápida sem ruídos incômodos
+                </li>
+              </ul>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="relative bg-brand-card/90 p-8 rounded-2xl border border-brand-border hover:border-brand-gold/40 transition-colors">
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-serif text-4xl sm:text-5xl font-black text-brand-red/90">03</span>
+                <div class="w-10 h-10 rounded-full bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-white mb-3">Servimos Seus Convidados à Vontade</h3>
+              <p class="text-sm text-brand-cream/70 leading-relaxed">
+                Durante 3 a 4 horas ininterruptas de rodízio, servimos fatias douradas, aromáticas e quentes. Seus convidados comem à vontade e você curte cada momento.
+              </p>
+              <ul class="mt-5 space-y-2 text-xs text-brand-cream/60">
+                <li class="flex items-center gap-2">
+                  <span class="text-brand-gold font-bold">✓</span> Fatias salgadas contínuas e doces gourmet
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-brand-gold font-bold">✓</span> Finalização com limpeza do nosso local
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. CARDÁPIOS & SABORES (Abas Interativas com JavaScript) -->
+      <section id="cardapios" class="py-20 lg:py-28 bg-brand-darker relative border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Heading -->
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs sm:text-sm font-bold tracking-widest text-brand-gold uppercase">Seleção Gastronômica</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3 text-balance">
+              Cardápios & Sabores Irresistíveis
+            </h2>
+            <p class="text-base sm:text-lg text-brand-cream/75 mt-4 text-balance">
+              Do clássico italiano aos sabores autorais sofisticados. Conheça as categorias mais pedidas nos nossos eventos.
+            </p>
+          </div>
+
+          <!-- Category Tabs Navigation -->
+          <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-12" id="menu-tabs">
+            <button
+              data-category="mais-pedidas"
+              class="menu-tab-btn active px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 bg-brand-red text-white shadow-md cursor-pointer border border-brand-red/50 flex items-center gap-1.5"
+            >
+              <span class="text-brand-gold">★</span>
+              <span>As Mais Pedidas nas Festas</span>
+            </button>
+            <button
+              data-category="tradicionais"
+              class="menu-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 bg-brand-card hover:bg-brand-surface text-brand-cream/80 hover:text-white cursor-pointer border border-brand-border"
+            >
+              Tradicionais Clássicas
+            </button>
+            <button
+              data-category="gourmet"
+              class="menu-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 bg-brand-card hover:bg-brand-surface text-brand-cream/80 hover:text-white cursor-pointer border border-brand-border"
+            >
+              Especiais & Gourmet
+            </button>
+            <button
+              data-category="doces"
+              class="menu-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 bg-brand-card hover:bg-brand-surface text-brand-cream/80 hover:text-white cursor-pointer border border-brand-border"
+            >
+              Doces Gourmet
+            </button>
+          </div>
+
+          <!-- TAB 1: AS MAIS PEDIDAS NAS FESTAS (CAMPEÃS DE EVENTOS) -->
+          <div id="tab-mais-pedidas" class="menu-tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Top 1: Calabresa Especial -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-gold/40 shadow-goldGlow/10 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_calabresa_artesanal_1794405899725.jpg"
+                  alt="Pizza Calabresa Artesanal Defumada com Cebola Roxa"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <span class="absolute top-3 right-3 bg-brand-red text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+                  <span>★</span> 1º Lugar em Festas
+                </span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Calabresa Especial com Cebola Roxa</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    A campeã absoluta dos eventos. Fatias finas de calabresa defumada artesanal crocante, cebola roxa marinada em azeite extravirgem, azeitonas pretas chilenas e orégano fresco.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Massa de Fermentação 48h</span>
+                  <span>A Mais Pedida</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top 2: Frango com Catupiry -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-gold/40 shadow-goldGlow/10 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_frango_catupiry_1794405898615.jpg"
+                  alt="Pizza Frango com Catupiry Original"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <span class="absolute top-3 right-3 bg-brand-red text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+                  <span>★</span> Favorita das Famílias
+                </span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Frango com Catupiry Original</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Peito de frango desfiado suculento refogado com ervas finas na panela, coberto com espirais generosas do legítimo Catupiry cremoso e gratinado na hora a 450°C.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Catupiry Original</span>
+                  <span>Super Cremosa</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top 3: Parma com Rúcula -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-gold/40 shadow-goldGlow/10 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_rucula_parma_gourmet_1794407037310.jpg"
+                  alt="Pizza de Rúcula com Presunto de Parma e Lascas de Grana Padano"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <span class="absolute top-3 right-3 bg-brand-gold text-brand-dark text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+                  <span>★</span> Top Casamentos & Corp
+                </span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Parma com Rúcula & Grana Padano</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Símbolo de requinte em casamentos e confraternizações. Molho pelati, muçarela fior di latte, fatias nobres de presunto cru tipo Parma, folhas frescas de rúcula e lascas de Grana Padano.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Presunto Cru Italiano</span>
+                  <span>Grana Padano Nobre</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top 4: Nutella com Morangos -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-gold/40 shadow-goldGlow/10 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_doce_nutella_morango_1794405692986.jpg"
+                  alt="Pizza de Nutella com Morangos Frescos e Raspas de Chocolate"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <span class="absolute top-3 right-3 bg-brand-red text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+                  <span>★</span> Campeã de Sobremesa
+                </span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Nutella com Morangos Frescos</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    A sobremesa mais disputada da festa. Massa leve crocante com base de chocolate, farta camada de autêntica Nutella cremosa, morangos frescos fatiados e raspas enroladas de chocolate belga.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Nutella Original</span>
+                  <span>Chocolate Belga</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top 5: Quatro Queijos Nobres -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-gold/40 shadow-goldGlow/10 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_quatro_queijos_nobres_1794406379160.jpg"
+                  alt="Pizza Quatro Queijos Nobres com Catupiry, Muçarela, Provolone e Gorgonzola"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <span class="absolute top-3 right-3 bg-brand-red text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+                  <span>★</span> Unanimidade Cremosa
+                </span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Quatro Queijos Nobres</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Fusão cremosa e borbulhante de muçarela derretida, provolone curado aromático, gorgonzola suave e Catupiry original gratinado sob fogo alto de 450°C.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Blend Nobre Cremoso</span>
+                  <span>Gratinado na Hora</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top 6: Margherita Especial -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-gold/40 shadow-goldGlow/10 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_margherita_especial_1794406832373.jpg"
+                  alt="Pizza Margherita Especial com Manjericão Gigante e Fior di Latte"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <span class="absolute top-3 right-3 bg-brand-red text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+                  <span>★</span> O Clássico Imbatível
+                </span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Margherita Especial</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    A tradição italiana perfeita. Molho de tomate pelati San Marzano, muçarela fior di latte macia, rodelas de tomate fresco da horta, manjericão gigante aromático e azeite extravirgem.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Pelati San Marzano</span>
+                  <span>Fior di Latte</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: TRADICIONAIS CLÁSSICAS -->
+          <div id="tab-tradicionais" class="menu-tab-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Item 1 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_margherita_especial_1794406832373.jpg"
+                  alt="Pizza Margherita Especial com Fior di Latte e Manjericão"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <span class="absolute top-3 right-3 bg-brand-red text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md">
+                  ★ Clássico da Casa
+                </span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Margherita Especial</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Molho de tomate pelati San Marzano, muçarela fior di latte, rodelas de tomate fresco, manjericão gigante da horta e azeite extravirgem aromatizado.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Massa de Fermentação 48h</span>
+                  <span>100% Artesanal</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_calabresa_artesanal_1794405899725.jpg"
+                  alt="Pizza Calabresa Artesanal Defumada"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Calabresa com Cebola Roxa</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Fatias bem finas de calabresa defumada artesanal, cebola roxa marinada em azeite, azeitonas pretas chilenas e orégano fresco desidratado.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Calabresa Premium</span>
+                  <span>Crocante</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_quatro_queijos_nobres_1794406379160.jpg"
+                  alt="Pizza Quatro Queijos Nobres"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Quatro Queijos Nobres</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Combinação harmoniosa de muçarela derretida, provolone curado, gorgonzola suave e requeijão cremoso tipo Catupiry original gratinado.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Blend Cremoso</span>
+                  <span>Gratinado na Hora</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_frango_catupiry_1794405898615.jpg"
+                  alt="Pizza Frango com Catupiry"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Frango com Catupiry Legítimo</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Peito de frango desfiado suavemente temperado na panela com ervas finas, coberto com o autêntico requeijão Catupiry e milho doce opcional.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Catupiry Original</span>
+                  <span>Tempero Autoral</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_portuguesa_tradicional_1794406216612.jpg"
+                  alt="Pizza Portuguesa Tradicional com Presunto, Ovos, Ervilhas e Cebola Roxa"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Portuguesa Tradicional</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Presunto cozido fatiado fininho, muçarela, ovos cozidos ralados, rodelas de cebola roxa, ervilhas frescas e azeitonas pretas.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Receita Familiar</span>
+                  <span>Equilíbrio Perfeito</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_napolitana_classica_1794406507183.jpg"
+                  alt="Pizza Napolitana Clássica com Muçarela, Tomates, Alho Frito Dourado e Parmesão"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Napolitana Clássica</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Muçarela de primeira qualidade, rodelas de tomates selecionados, alho frito dourado crocante e queijo parmesão ralado na hora.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Alho Dourado Crocante</span>
+                  <span>Parmesão Curado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: ESPECIAIS & GOURMET -->
+          <div id="tab-gourmet" class="menu-tab-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Item 1 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_rucula_parma_gourmet_1794407037310.jpg"
+                  alt="Pizza de Rúcula com Presunto de Parma e Lascas de Grana Padano"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <span class="absolute top-3 right-3 bg-brand-gold text-brand-dark text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md">
+                  ★ Mais Pedida em Casamentos
+                </span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Parma com Rúcula & Grana Padano</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Molho pelati, muçarela fior di latte, fatias nobres de presunto tipo Parma cru, folhas frescas de rúcula selvagem e lascas generosas de Grana Padano.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Presunto Crú Italiano</span>
+                  <span>Lascas de Grana Padano</span>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Item 3 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+                  alt="Cogumelos Salteados com Alho Poró"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Cogumelos Salteados & Alho Poró</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Mix de cogumelos frescos (shimeji e paris) salteados no azeite com tomilho, alho-poró laminado macio e base de queijo gruyère artesanal.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Shimeji & Paris Frescos</span>
+                  <span>Toque de Tomilho</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=800&q=80"
+                  alt="Pepperoni com Hot Honey"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <span class="absolute top-3 right-3 bg-brand-red text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md">
+                  ★ Tendência Gourmet
+                </span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Pepperoni com Mel Picante (Hot Honey)</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Fatias generosas de pepperoni artesanal crocante, muçarela especial e fio generoso de mel silvestre infusionado com pimenta calabresa.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Mel Silvestre & Pimenta</span>
+                  <span>Pepperoni Crocante</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: DOCES GOURMET -->
+          <div id="tab-doces" class="menu-tab-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Item 1 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_doce_nutella_morango_1794405692986.jpg"
+                  alt="Pizza de Nutella com Morangos Frescos e Raspas de Chocolate"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <span class="absolute top-3 right-3 bg-brand-red text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md">
+                  ★ A favorita dos eventos
+                </span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Nutella com Morangos Frescos</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Massa leve crocante com base de chocolate, camada generosa de autêntica Nutella, lâminas de morangos frescos selecionados e raspas de chocolate belga.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Nutella Original</span>
+                  <span>Chocolate Belga</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_romeu_julieta_1794405694979.jpg"
+                  alt="Pizza Romeu e Julieta com Goiabada Cascão e Queijo Canastra"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Romeu & Julieta da Canastra</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Goiabada cascão artesanal derretida no ponto certo com queijo meia-cura da Serra da Canastra levemente gratinado no forno.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Queijo da Canastra</span>
+                  <span>Goiabada Cascão</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between">
+              <div class="relative h-48 overflow-hidden bg-brand-surface">
+                <img
+                  src="/src/assets/images/pizza_banana_docedeleite_1794405694048.jpg"
+                  alt="Pizza Doce de Banana Caramelizada, Doce de Leite, Canela e Castanhas"
+                  referrerpolicy="no-referrer"
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-xl font-bold text-white mb-2">Banana Flambada com Doce de Leite</h3>
+                  <p class="text-sm text-brand-cream/70 leading-relaxed">
+                    Fatias finas de banana prata caramelizadas, canela aromática do Ceilão e doce de leite argentino cremoso salpicado com castanhas.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-brand-border/60 flex items-center justify-between text-xs text-brand-gold">
+                  <span>Doce de Leite Argentino</span>
+                  <span>Canela Aromática</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Notice -->
+          <div class="mt-12 text-center text-xs sm:text-sm text-brand-cream/60">
+            * Podemos personalizar os sabores do seu evento conforme a preferência dos noivos ou anfitriões.
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. CALCULADORA RÁPIDA / SIMULADOR DE EVENTO (Interativo via JS) -->
+      <section id="simulador" class="py-20 lg:py-28 bg-brand-dark relative border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Heading -->
+          <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-xs sm:text-sm font-bold tracking-widest text-brand-gold uppercase">Orçamento Instantâneo</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3 text-balance">
+              Simulador de Evento & Orçamento Rápido
+            </h2>
+            <p class="text-base sm:text-lg text-brand-cream/75 mt-4 text-balance">
+              Selecione o número de convidados e o tipo de festa para visualizar uma estimativa transparente da estrutura necessária e receber a cotação pronta no WhatsApp.
+            </p>
+          </div>
+
+          <!-- Calculator Container (2-Column Grid) -->
+          <div class="bg-brand-card rounded-3xl border border-brand-border shadow-2xl p-6 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            <!-- Left Column: Controls & Inputs (7 cols) -->
+            <div class="lg:col-span-7 space-y-8">
+              <!-- Guest Count Slider -->
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <label for="guests-slider" class="text-sm font-semibold text-white flex items-center gap-2">
+                    <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    Quantidade de Convidados:
+                  </label>
+                  <div class="flex items-center gap-1 bg-brand-surface px-4 py-1.5 rounded-lg border border-brand-border">
+                    <span id="guest-count-display" class="font-serif text-2xl font-bold text-brand-gold tabular-nums">50</span>
+                    <span class="text-xs text-brand-cream/60">pessoas</span>
+                  </div>
+                </div>
+
+                <input
+                  id="guests-slider"
+                  type="range"
+                  min="20"
+                  max="250"
+                  step="5"
+                  value="50"
+                  class="w-full h-2.5 bg-brand-surface rounded-lg appearance-none cursor-pointer accent-brand-gold"
+                />
+                <div class="flex justify-between text-[11px] text-brand-cream/50 mt-1.5 font-medium">
+                  <span>20 pessoas</span>
+                  <span>80 pessoas</span>
+                  <span>150 pessoas</span>
+                  <span>250+ pessoas</span>
+                </div>
+              </div>
+
+              <!-- Event Type Selector -->
+              <div>
+                <label class="block text-sm font-semibold text-white mb-3">
+                  Tipo de Evento:
+                </label>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="event-type-group">
+                  <button
+                    type="button"
+                    data-event="Aniversário / Festa Privada"
+                    class="event-type-btn active text-xs font-semibold py-3 px-3 rounded-xl border border-brand-red bg-brand-red/20 text-white text-center transition-all cursor-pointer"
+                  >
+                    Aniversário
+                  </button>
+                  <button
+                    type="button"
+                    data-event="Confraternização Corporativa"
+                    class="event-type-btn text-xs font-semibold py-3 px-3 rounded-xl border border-brand-border bg-brand-surface text-brand-cream/80 hover:text-white text-center transition-all cursor-pointer"
+                  >
+                    Corporativo
+                  </button>
+                  <button
+                    type="button"
+                    data-event="Casamento / Noivado"
+                    class="event-type-btn text-xs font-semibold py-3 px-3 rounded-xl border border-brand-border bg-brand-surface text-brand-cream/80 hover:text-white text-center transition-all cursor-pointer"
+                  >
+                    Casamento
+                  </button>
+                  <button
+                    type="button"
+                    data-event="Confraternização Familiar ou Amigos"
+                    class="event-type-btn text-xs font-semibold py-3 px-3 rounded-xl border border-brand-border bg-brand-surface text-brand-cream/80 hover:text-white text-center transition-all cursor-pointer"
+                  >
+                    Outros
+                  </button>
+                </div>
+              </div>
+
+              <!-- Package / Duration Selector -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="package-select" class="block text-sm font-semibold text-white mb-2">
+                    Opção de Pacote:
+                  </label>
+                  <select
+                    id="package-select"
+                    class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-cream focus:outline-none focus:border-brand-gold cursor-pointer"
+                  >
+                    <option value="Menu Clássico Tradicional (Salgadas + Doces)">Menu Clássico (Tradicionais + Doces)</option>
+                    <option value="Menu Premium Gourmet (Especiais + Doces Nobres)" selected>Menu Premium Gourmet (Especiais + Doces)</option>
+                    <option value="Menu Completo com Entradas & Antepastos">Menu Completo com Antepastos</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="duration-select" class="block text-sm font-semibold text-white mb-2">
+                    Duração do Serviço:
+                  </label>
+                  <select
+                    id="duration-select"
+                    class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-cream focus:outline-none focus:border-brand-gold cursor-pointer"
+                  >
+                    <option value="3 Horas de Rodízio Livre">3 Horas de Rodízio Livre</option>
+                    <option value="4 Horas de Rodízio Livre" selected>4 Horas de Rodízio Livre (Recomendado)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Optional Date & City -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="event-date" class="block text-xs font-medium text-brand-cream/70 mb-1.5">
+                    Data Prevista (Opcional):
+                  </label>
+                  <input
+                    id="event-date"
+                    type="text"
+                    placeholder="Ex: 24/10 ou Novembro"
+                    class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-2.5 text-sm text-brand-cream placeholder-brand-muted/60 focus:outline-none focus:border-brand-gold"
+                  />
+                </div>
+                <div>
+                  <label for="event-city" class="block text-xs font-medium text-brand-cream/70 mb-1.5">
+                    Bairro ou Cidade do Evento:
+                  </label>
+                  <input
+                    id="event-city"
+                    type="text"
+                    placeholder="Ex: São Paulo, Campinas, etc."
+                    class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-2.5 text-sm text-brand-cream placeholder-brand-muted/60 focus:outline-none focus:border-brand-gold"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Live Summary & Direct WhatsApp Conversion (5 cols) -->
+            <div class="lg:col-span-5 bg-gradient-to-b from-brand-surface via-brand-surface/90 to-brand-card p-6 sm:p-8 rounded-2xl border border-brand-gold/30 flex flex-col justify-between relative shadow-goldGlow/20">
+              <div>
+                <div class="flex items-center justify-between pb-4 border-b border-brand-border">
+                  <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Resumo da Simulação</span>
+                  <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Rodízio À Vontade
+                  </span>
+                </div>
+
+                <!-- Metrics Output Cards -->
+                <div class="space-y-4 my-6">
+                  <div class="flex items-center justify-between py-2 border-b border-brand-border/40 text-sm">
+                    <span class="text-brand-cream/70">Convidados estimados:</span>
+                    <span id="summary-guests" class="font-bold text-white tabular-nums">50 pessoas</span>
+                  </div>
+
+                  <div class="flex items-center justify-between py-2 border-b border-brand-border/40 text-sm">
+                    <span class="text-brand-cream/70">Estimativa de fatias:</span>
+                    <span id="summary-slices" class="font-bold text-brand-gold tabular-nums">~400 a 500 fatias</span>
+                  </div>
+
+                  <div class="flex items-center justify-between py-2 border-b border-brand-border/40 text-sm">
+                    <span class="text-brand-cream/70">Fornos profissionais:</span>
+                    <span id="summary-ovens" class="font-bold text-white">1 Forno Alta Temperatura</span>
+                  </div>
+
+                  <div class="flex items-center justify-between py-2 border-b border-brand-border/40 text-sm">
+                    <span class="text-brand-cream/70">Equipe alocada:</span>
+                    <span id="summary-staff" class="font-bold text-white">1 Pizzaiolo + 1 Auxiliar</span>
+                  </div>
+
+                  <div class="flex items-center justify-between py-2 text-sm">
+                    <span class="text-brand-cream/70">Incluso no serviço:</span>
+                    <span class="font-bold text-emerald-400">Pratos, guardanapos & limpeza</span>
+                  </div>
+                </div>
+
+                <div class="bg-brand-dark/60 p-3.5 rounded-xl border border-brand-border text-xs text-brand-cream/80 leading-relaxed mb-6">
+                  💡 <strong>Sem limites por convidado:</strong> Todos os convidados comem à vontade durante todo o tempo de serviço contratado.
+                </div>
+              </div>
+
+              <!-- WhatsApp CTA Button -->
+              <div>
+                <a
+                  id="whatsapp-submit-btn"
+                  href="https://wa.me/5500000000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full red-gradient-btn text-white text-base font-bold py-4 px-6 rounded-xl shadow-redGlow hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-3 cursor-pointer border border-red-500/30 group"
+                >
+                  <svg class="w-6 h-6 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                  </svg>
+                  <span>Receber Cotação no WhatsApp</span>
+                </a>
+                <p class="text-center text-[11px] text-brand-cream/50 mt-2.5">
+                  Resposta rápida em poucos minutos com valores e disponibilidade.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. DEPOIMENTOS / PROVA SOCIAL -->
+      <section id="depoimentos" class="py-20 lg:py-28 bg-brand-darker relative border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Heading -->
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs sm:text-sm font-bold tracking-widest text-brand-gold uppercase">Prova Social Real</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3 text-balance">
+              Quem Contrata a Quadratta Recomenda
+            </h2>
+            <p class="text-base sm:text-lg text-brand-cream/75 mt-4 text-balance">
+              A satisfação dos nossos anfitriões e os elogios dos convidados são a nossa maior assinatura de excelência.
+            </p>
+          </div>
+
+          <!-- 3 Testimonial Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div class="bg-brand-card p-8 rounded-2xl border border-brand-border flex flex-col justify-between hover:border-brand-gold/40 transition-colors">
+              <div>
+                <!-- Stars -->
+                <div class="flex items-center gap-1 text-brand-gold mb-4">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  <span class="text-xs text-brand-cream/60 ml-2">Nota 5.0</span>
+                </div>
+                <blockquote class="text-brand-cream/85 text-sm sm:text-base leading-relaxed italic mb-6">
+                  "A Quadratta foi o ponto alto do nosso casamento! Os convidados elogiam até hoje a massa crocante e levinha e a velocidade do serviço. Ninguém ficou esperando em fila e o atendimento da equipe foi impecável."
+                </blockquote>
+              </div>
+              <div class="flex items-center gap-4 pt-4 border-t border-brand-border/60">
+                <div class="w-12 h-12 rounded-full bg-brand-surface border border-brand-gold/40 flex items-center justify-center font-bold text-brand-gold">
+                  MC
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-white">Mariana Costa & Thiago</h3>
+                  <p class="text-xs text-brand-cream/60">Casamento em Sítio · 120 convidados</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-brand-card p-8 rounded-2xl border border-brand-border flex flex-col justify-between hover:border-brand-gold/40 transition-colors">
+              <div>
+                <div class="flex items-center gap-1 text-brand-gold mb-4">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  <span class="text-xs text-brand-cream/60 ml-2">Nota 5.0</span>
+                </div>
+                <blockquote class="text-brand-cream/85 text-sm sm:text-base leading-relaxed italic mb-6">
+                  "Contratamos para a confraternização anual da nossa empresa de tecnologia. Pontualidade britânica, montagem limpa e silenciosa. A pizza de Parma com Rúcula e a de Pepperoni com Mel Picante foram um sucesso absoluto!"
+                </blockquote>
+              </div>
+              <div class="flex items-center gap-4 pt-4 border-t border-brand-border/60">
+                <div class="w-12 h-12 rounded-full bg-brand-surface border border-brand-gold/40 flex items-center justify-center font-bold text-brand-gold">
+                  RM
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-white">Dr. Roberto Mendes</h3>
+                  <p class="text-xs text-brand-cream/60">Diretor de Operações · 85 convidados</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-brand-card p-8 rounded-2xl border border-brand-border flex flex-col justify-between hover:border-brand-gold/40 transition-colors">
+              <div>
+                <div class="flex items-center gap-1 text-brand-gold mb-4">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  <span class="text-xs text-brand-cream/60 ml-2">Nota 5.0</span>
+                </div>
+                <blockquote class="text-brand-cream/85 text-sm sm:text-base leading-relaxed italic mb-6">
+                  "Comemorei meus 40 anos no salão do condomínio. Melhor escolha da vida! Não me preocupei com compras, nem com pratos, nem com sujeira. As pizzas doces de Nutella com morango fecharam a noite com chave de ouro."
+                </blockquote>
+              </div>
+              <div class="flex items-center gap-4 pt-4 border-t border-brand-border/60">
+                <div class="w-12 h-12 rounded-full bg-brand-surface border border-brand-gold/40 flex items-center justify-center font-bold text-brand-gold">
+                  CF
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-white">Camila Figueiredo</h3>
+                  <p class="text-xs text-brand-cream/60">Aniversário de 40 anos · 55 convidados</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Proof Numbers Strip -->
+          <div class="mt-16 bg-brand-card/60 p-6 sm:p-8 rounded-2xl border border-brand-border grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div class="font-serif text-3xl sm:text-4xl font-bold text-brand-gold tabular-nums">+350</div>
+              <div class="text-xs sm:text-sm text-brand-cream/70 mt-1">Eventos Realizados</div>
+            </div>
+            <div>
+              <div class="font-serif text-3xl sm:text-4xl font-bold text-brand-red tabular-nums">+18.000</div>
+              <div class="text-xs sm:text-sm text-brand-cream/70 mt-1">Pizzas Assadas ao Vivo</div>
+            </div>
+            <div>
+              <div class="font-serif text-3xl sm:text-4xl font-bold text-brand-gold tabular-nums">100%</div>
+              <div class="text-xs sm:text-sm text-brand-cream/70 mt-1">Pontualidade na Chegada</div>
+            </div>
+            <div>
+              <div class="font-serif text-3xl sm:text-4xl font-bold text-emerald-400 tabular-nums">5.0 / 5.0</div>
+              <div class="text-xs sm:text-sm text-brand-cream/70 mt-1">Avaliações Positivas</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. PERGUNTAS FREQUENTES (FAQ Accordion com JS) -->
+      <section id="faq" class="py-20 lg:py-28 bg-brand-dark relative border-t border-brand-border">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Heading -->
+          <div class="text-center mb-14">
+            <span class="text-xs sm:text-sm font-bold tracking-widest text-brand-gold uppercase">Tire Suas Dúvidas</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3 text-balance">
+              Perguntas Frequentes
+            </h2>
+            <p class="text-base sm:text-lg text-brand-cream/75 mt-4 text-balance">
+              Tudo o que você precisa saber sobre a contratação do nosso rodízio de pizza para eventos.
+            </p>
+          </div>
+
+          <!-- FAQ Accordion List -->
+          <div class="space-y-4" id="faq-accordion">
+            <!-- Item 1 -->
+            <div class="faq-item bg-brand-card rounded-2xl border border-brand-border overflow-hidden transition-colors">
+              <button
+                type="button"
+                class="faq-question w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-white hover:text-brand-gold transition-colors focus:outline-none"
+              >
+                <span>Quanto tempo dura o serviço de buffet de pizza?</span>
+                <span class="faq-icon text-brand-gold transform transition-transform duration-300 text-xl font-sans">
+                  +
+                </span>
+              </button>
+              <div class="faq-answer max-h-0 opacity-0 overflow-hidden px-6 text-sm text-brand-cream/75 leading-relaxed">
+                <div class="pb-5 pt-1 border-t border-brand-border/40">
+                  O serviço padrão de rodízio dura de <strong>3 a 4 horas ininterruptas</strong> de atendimento contínuo à vontade para os seus convidados. Além desse período de consumo, chegamos cerca de <strong>1h30 antes</strong> do horário marcado para montar nossa estação e precisamos de aproximadamente 40 minutos ao final para desmontar e higienizar todo o espaço.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="faq-item bg-brand-card rounded-2xl border border-brand-border overflow-hidden transition-colors">
+              <button
+                type="button"
+                class="faq-question w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-white hover:text-brand-gold transition-colors focus:outline-none"
+              >
+                <span>Qual estrutura o cliente precisa fornecer no local?</span>
+                <span class="faq-icon text-brand-gold transform transition-transform duration-300 text-xl font-sans">
+                  +
+                </span>
+              </button>
+              <div class="faq-answer max-h-0 opacity-0 overflow-hidden px-6 text-sm text-brand-cream/75 leading-relaxed">
+                <div class="pb-5 pt-1 border-t border-brand-border/40">
+                  Praticamente nada! Precisamos apenas de um <strong>ponto de energia elétrica comum (110V ou 220V)</strong> e uma <strong>área plana coberta de aproximadamente 2m x 2m</strong> (pode ser varanda, garagem, quintal, quiosque ou salão de festas). Nós levamos os fornos portáteis de alta performance, bancadas higiênicas em aço inox, botijão próprio certificado, pás, pratos descartáveis de alta gramatura, guardanapos e lixeira própria.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="faq-item bg-brand-card rounded-2xl border border-brand-border overflow-hidden transition-colors">
+              <button
+                type="button"
+                class="faq-question w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-white hover:text-brand-gold transition-colors focus:outline-none"
+              >
+                <span>Com quanta antecedência preciso reservar a data?</span>
+                <span class="faq-icon text-brand-gold transform transition-transform duration-300 text-xl font-sans">
+                  +
+                </span>
+              </button>
+              <div class="faq-answer max-h-0 opacity-0 overflow-hidden px-6 text-sm text-brand-cream/75 leading-relaxed">
+                <div class="pb-5 pt-1 border-t border-brand-border/40">
+                  Recomendamos a reserva com pelo menos <strong>15 a 45 dias de antecedência</strong> para garantir a sua data, especialmente para sextas-feiras, sábados, feriados e durante os meses de novembro e dezembro (época de confraternizações e formaturas), onde as datas costumam esgotar rapidamente.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="faq-item bg-brand-card rounded-2xl border border-brand-border overflow-hidden transition-colors">
+              <button
+                type="button"
+                class="faq-question w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-white hover:text-brand-gold transition-colors focus:outline-none"
+              >
+                <span>Atendem em quais regiões? Há taxa de deslocamento?</span>
+                <span class="faq-icon text-brand-gold transform transition-transform duration-300 text-xl font-sans">
+                  +
+                </span>
+              </button>
+              <div class="faq-answer max-h-0 opacity-0 overflow-hidden px-6 text-sm text-brand-cream/75 leading-relaxed">
+                <div class="pb-5 pt-1 border-t border-brand-border/40">
+                  Atendemos toda a capital e região metropolitana, além de cidades vizinhas, litoral e interior em um raio de até 100 km. Para locais mais afastados, calculamos apenas uma pequena taxa justa referente a pedágios e combustível, sem surpresas no seu orçamento.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="faq-item bg-brand-card rounded-2xl border border-brand-border overflow-hidden transition-colors">
+              <button
+                type="button"
+                class="faq-question w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-white hover:text-brand-gold transition-colors focus:outline-none"
+              >
+                <span>Crianças pagam valor integral?</span>
+                <span class="faq-icon text-brand-gold transform transition-transform duration-300 text-xl font-sans">
+                  +
+                </span>
+              </button>
+              <div class="faq-answer max-h-0 opacity-0 overflow-hidden px-6 text-sm text-brand-cream/75 leading-relaxed">
+                <div class="pb-5 pt-1 border-t border-brand-border/40">
+                  Não! <strong>Crianças de 0 a 6 anos não pagam</strong>. Crianças de <strong>7 a 10 anos pagam meia (50% do valor)</strong>. A partir de 11 anos é contabilizado como convidado pagante integral.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="faq-item bg-brand-card rounded-2xl border border-brand-border overflow-hidden transition-colors">
+              <button
+                type="button"
+                class="faq-question w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-white hover:text-brand-gold transition-colors focus:outline-none"
+              >
+                <span>Vocês personalizam sabores ou montam os mais pedidos para o evento?</span>
+                <span class="faq-icon text-brand-gold transform transition-transform duration-300 text-xl font-sans">
+                  +
+                </span>
+              </button>
+              <div class="faq-answer max-h-0 opacity-0 overflow-hidden px-6 text-sm text-brand-cream/75 leading-relaxed">
+                <div class="pb-5 pt-1 border-t border-brand-border/40">
+                  Com certeza! Sugerimos sempre a seleção das <strong>pizzas campeãs de pedidos</strong> (como Calabresa Especial, Frango com Catupiry, Parma com Rúcula, Quatro Queijos e Nutella com Morangos), pois têm 100% de aceitação e garantem rodízio ágil e sem filas. Além disso, você pode personalizar e priorizar os sabores favoritos do anfitrião ou dos convidados de honra.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Action Callout -->
+          <div class="mt-12 text-center p-6 bg-brand-card rounded-2xl border border-brand-border">
+            <h3 class="font-serif text-lg font-bold text-white">Ficou com alguma dúvida específica sobre o seu evento?</h3>
+            <p class="text-sm text-brand-cream/70 mt-1 mb-4">Converse diretamente com nosso coordenador de eventos pelo WhatsApp.</p>
+            <a
+              href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20buffet%20da%20Quadratta%20Pizzas."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-brand-gold hover:text-brand-goldLight text-sm font-semibold underline"
+            >
+              Falar com a equipe no WhatsApp &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Banner Pre-Footer CTA -->
+      <section class="py-16 bg-gradient-to-r from-brand-red via-[#9c1f19] to-brand-red text-white text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
+            Transforme Sua Festa em uma Experiência Inesquecível
+          </h2>
+          <p class="text-white/90 text-base sm:text-lg mt-4 max-w-2xl mx-auto font-normal">
+            Garanta a data do seu evento com quem entende de pizza artesanal redonda e excelência no atendimento.
+          </p>
+          <div class="mt-8 flex justify-center">
+            <a
+              href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20reservar%20uma%20data%20com%20a%20Quadratta%20Pizzas."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-white text-brand-red hover:bg-brand-cream text-base sm:text-lg font-bold px-8 py-4 rounded-xl shadow-2xl hover:scale-105 transition-all duration-200 flex items-center gap-3"
+            >
+              <svg class="w-6 h-6 fill-brand-red" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+              </svg>
+              <span>Fazer Orçamento sem Compromisso</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 8. FOOTER (Rodapé) -->
+    <footer class="bg-brand-darker border-t border-brand-border text-brand-cream/70 text-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <!-- Col 1: Brand & Bio -->
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-brand-red flex items-center justify-center text-brand-gold">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 11h.01"></path>
+                  <path d="M11 15h.01"></path>
+                  <path d="M16 16h.01"></path>
+                  <path d="m2 16 20 6-6-20A20 20 0 0 0 2 16Z"></path>
+                  <path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"></path>
+                </svg>
+              </div>
+              <span class="font-serif text-xl font-bold tracking-tight text-white">
+                QUADRATTA <span class="text-brand-red text-sm font-sans font-bold">PIZZAS</span>
+              </span>
+            </div>
+            <p class="text-xs text-brand-cream/65 leading-relaxed">
+              Buffet de pizza artesanal redonda feito ao vivo em eventos, casamentos, aniversários e encontros corporativos. Levamos forno profissional e toda a estrutura até o seu local.
+            </p>
+            <div class="pt-2 text-xs text-brand-gold font-medium">
+              Sua casa ou empresa sem sujeira e seus convidados encantados.
+            </div>
+          </div>
+
+          <!-- Col 2: Navigation Links -->
+          <div>
+            <h4 class="font-serif text-base font-bold text-white mb-4">Navegação Rápida</h4>
+            <ul class="space-y-2.5 text-xs">
+              <li><a href="#diferenciais" class="hover:text-brand-gold transition-colors">Por Que a Quadratta?</a></li>
+              <li><a href="#como-funciona" class="hover:text-brand-gold transition-colors">Como Funciona o Serviço</a></li>
+              <li><a href="#cardapios" class="hover:text-brand-gold transition-colors">Cardápios & Sabores</a></li>
+              <li><a href="#simulador" class="hover:text-brand-gold transition-colors">Simulador de Evento</a></li>
+              <li><a href="#depoimentos" class="hover:text-brand-gold transition-colors">Depoimentos de Clientes</a></li>
+              <li><a href="#faq" class="hover:text-brand-gold transition-colors">Perguntas Frequentes (FAQ)</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Contato & Atendimento -->
+          <div>
+            <h4 class="font-serif text-base font-bold text-white mb-4">Atendimento & Contato</h4>
+            <ul class="space-y-3 text-xs">
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-brand-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+                  WhatsApp: (00) 00000-0000
+                </a>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-brand-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span class="hover:text-white transition-colors">
+                  contato@quadrattapizzas.com.br
+                </span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-brand-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>
+                  Atendimento em Capital, Litoral e Interior (raio de até 100km)
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Horários & Redes -->
+          <div>
+            <h4 class="font-serif text-base font-bold text-white mb-4">Horário de Atendimento</h4>
+            <p class="text-xs text-brand-cream/65 leading-relaxed mb-4">
+              Segunda a Sábado: 09h às 20h<br />
+              Domingos e Feriados: 10h às 16h
+            </p>
+            <div class="pt-2">
+              <span class="block text-xs font-semibold text-white mb-2">Siga a Quadratta:</span>
+              <div class="flex items-center gap-3">
+                <a href="#" aria-label="Instagram da Quadratta Pizzas" class="w-9 h-9 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-cream hover:text-brand-gold hover:border-brand-gold transition-colors">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+                <a href="#" aria-label="Facebook da Quadratta Pizzas" class="w-9 h-9 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-cream hover:text-brand-gold hover:border-brand-gold transition-colors">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.688 5H18V0h-3.808C10.597 0 9 1.583 9 4.615V8z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-14 pt-8 border-t border-brand-border text-center text-xs text-brand-cream/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p>© 2026 Quadratta Pizzas Eventos e Festas. Todos os direitos reservados.</p>
+          <p class="flex items-center gap-1">
+            <span>Feito com dedicação para celebrações inesquecíveis.</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a
+      id="floating-whatsapp-btn"
+      href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Quadratta%20Pizzas%20e%20gostaria%20de%20atendimento."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar no WhatsApp com a Quadratta Pizzas"
+      class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group focus:outline-none focus:ring-4 focus:ring-emerald-400/50"
+    >
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
+      <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out font-semibold text-xs pl-0 group-hover:pl-2">
+        Orçamento Rápido
+      </span>
+    </a>
+
+    <!-- NATIVE JAVASCRIPT CONTROLLERS -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        /* ==========================================================
+         * 1. MOBILE MENU HAMBURGER CONTROLLER
+         * ========================================================== */
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconBars = document.getElementById('menu-icon-bars');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMobileMenu() {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          if (isOpen) {
+            mobileMenu.classList.add('hidden');
+            menuIconBars.classList.remove('hidden');
+            menuIconClose.classList.add('hidden');
+          } else {
+            mobileMenu.classList.remove('hidden');
+            menuIconBars.classList.add('hidden');
+            menuIconClose.classList.remove('hidden');
+          }
+        }
+
+        if (mobileMenuBtn && mobileMenu) {
+          mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+          mobileNavLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+              mobileMenu.classList.add('hidden');
+              menuIconBars.classList.remove('hidden');
+              menuIconClose.classList.add('hidden');
+            });
+          });
+        }
+
+        /* ==========================================================
+         * 2. CARDÁPIOS & SABORES TABS CONTROLLER
+         * ========================================================== */
+        const menuTabButtons = document.querySelectorAll('.menu-tab-btn');
+        const menuTabContents = document.querySelectorAll('.menu-tab-content');
+
+        menuTabButtons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const targetCategory = btn.getAttribute('data-category');
+
+            // Reset all buttons
+            menuTabButtons.forEach(function (b) {
+              b.classList.remove('bg-brand-red', 'text-white', 'border-brand-red/50');
+              b.classList.add('bg-brand-card', 'text-brand-cream/80', 'border-brand-border');
+            });
+
+            // Set active button style
+            btn.classList.add('bg-brand-red', 'text-white', 'border-brand-red/50');
+            btn.classList.remove('bg-brand-card', 'text-brand-cream/80', 'border-brand-border');
+
+            // Toggle contents
+            menuTabContents.forEach(function (content) {
+              if (content.id === 'tab-' + targetCategory) {
+                content.classList.remove('hidden');
+              } else {
+                content.classList.add('hidden');
+              }
+            });
+          });
+        });
+
+        /* ==========================================================
+         * 3. FAQ ACCORDION CONTROLLER
+         * ========================================================== */
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(function (item) {
+          const questionBtn = item.querySelector('.faq-question');
+          const answerDiv = item.querySelector('.faq-answer');
+          const iconSpan = item.querySelector('.faq-icon');
+
+          questionBtn.addEventListener('click', function () {
+            const isOpen = answerDiv.style.maxHeight && answerDiv.style.maxHeight !== '0px';
+
+            // Close all other accordion items for clean UX
+            faqItems.forEach(function (otherItem) {
+              const otherAnswer = otherItem.querySelector('.faq-answer');
+              const otherIcon = otherItem.querySelector('.faq-icon');
+              otherAnswer.style.maxHeight = '0px';
+              otherAnswer.classList.remove('opacity-100');
+              otherAnswer.classList.add('opacity-0');
+              otherIcon.textContent = '+';
+              otherIcon.classList.remove('rotate-45');
+              otherItem.classList.remove('border-brand-gold/50');
+            });
+
+            // If not open, open this item
+            if (!isOpen) {
+              answerDiv.style.maxHeight = answerDiv.scrollHeight + 'px';
+              answerDiv.classList.remove('opacity-0');
+              answerDiv.classList.add('opacity-100');
+              iconSpan.textContent = '×';
+              iconSpan.classList.add('rotate-45');
+              item.classList.add('border-brand-gold/50');
+            }
+          });
+        });
+
+        // Open first FAQ item by default
+        if (faqItems.length > 0) {
+          const firstAnswer = faqItems[0].querySelector('.faq-answer');
+          const firstIcon = faqItems[0].querySelector('.faq-icon');
+          firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+          firstAnswer.classList.remove('opacity-0');
+          firstAnswer.classList.add('opacity-100');
+          firstIcon.textContent = '×';
+          firstIcon.classList.add('rotate-45');
+          faqItems[0].classList.add('border-brand-gold/50');
+        }
+
+        /* ==========================================================
+         * 4. CALCULADORA RÁPIDA & SIMULADOR DE EVENTO
+         * ========================================================== */
+        const guestsSlider = document.getElementById('guests-slider');
+        const guestCountDisplay = document.getElementById('guest-count-display');
+        const summaryGuests = document.getElementById('summary-guests');
+        const summarySlices = document.getElementById('summary-slices');
+        const summaryOvens = document.getElementById('summary-ovens');
+        const summaryStaff = document.getElementById('summary-staff');
+        const eventTypeBtns = document.querySelectorAll('.event-type-btn');
+        const packageSelect = document.getElementById('package-select');
+        const durationSelect = document.getElementById('duration-select');
+        const eventDateInput = document.getElementById('event-date');
+        const eventCityInput = document.getElementById('event-city');
+        const whatsappSubmitBtn = document.getElementById('whatsapp-submit-btn');
+
+        let selectedEventType = 'Aniversário / Festa Privada';
+
+        // Event type button selection
+        eventTypeBtns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            eventTypeBtns.forEach(function (b) {
+              b.classList.remove('border-brand-red', 'bg-brand-red/20', 'text-white');
+              b.classList.add('border-brand-border', 'bg-brand-surface', 'text-brand-cream/80');
+            });
+            btn.classList.add('border-brand-red', 'bg-brand-red/20', 'text-white');
+            btn.classList.remove('border-brand-border', 'bg-brand-surface', 'text-brand-cream/80');
+            selectedEventType = btn.getAttribute('data-event');
+            syncWhatsAppBtn();
+          });
+        });
+
+        function updateSimulation() {
+          const guests = parseInt(guestsSlider.value, 10);
+          guestCountDisplay.textContent = guests;
+          summaryGuests.textContent = guests + ' pessoas';
+
+          // Estimated slices: ~8 to 10 slices per guest
+          const minSlices = guests * 8;
+          const maxSlices = guests * 10;
+          summarySlices.textContent = '~' + minSlices + ' a ' + maxSlices + ' fatias';
+
+          // Equipment & Staff calculation logic
+          if (guests <= 50) {
+            summaryOvens.textContent = '1 Forno Profissional 450°C';
+            summaryStaff.textContent = '1 Pizzaiolo Mestre + 1 Auxiliar';
+          } else if (guests <= 100) {
+            summaryOvens.textContent = '2 Fornos Profissionais 450°C';
+            summaryStaff.textContent = '2 Pizzaiolos Mestres + 1 Auxiliar/Garçom';
+          } else if (guests <= 160) {
+            summaryOvens.textContent = '3 Fornos Profissionais 450°C';
+            summaryStaff.textContent = '3 Pizzaiolos Mestres + 2 Auxiliares/Garçons';
+          } else {
+            summaryOvens.textContent = '4 Fornos Profissionais 450°C';
+            summaryStaff.textContent = '4 Pizzaiolos Mestres + 3 Garçons';
+          }
+        }
+
+        function generateWhatsAppUrl() {
+          const guests = guestsSlider ? guestsSlider.value : '50';
+          const selectedPackage = packageSelect ? packageSelect.value : 'Menu Premium Gourmet';
+          const duration = durationSelect ? durationSelect.value : '4 Horas de Rodízio Livre';
+          const date = eventDateInput && eventDateInput.value.trim() ? eventDateInput.value.trim() : 'A definir';
+          const city = eventCityInput && eventCityInput.value.trim() ? eventCityInput.value.trim() : 'A confirmar';
+
+          const message = 
+            '🍕 *Olá, Quadratta Pizzas Eventos e Festas!*\n\n' +
+            'Fiz uma simulação pelo site e gostaria de receber a cotação detalhada para o meu evento:\n\n' +
+            '• *Tipo de Evento:* ' + selectedEventType + '\n' +
+            '• *Quantidade de Convidados:* ' + guests + ' pessoas\n' +
+            '• *Pacote de Interesse:* ' + selectedPackage + '\n' +
+            '• *Duração do Serviço:* ' + duration + '\n' +
+            '• *Data Prevista:* ' + date + '\n' +
+            '• *Local/Cidade:* ' + city + '\n\n' +
+            'Poderiam me informar a disponibilidade e os valores detalhados? Obrigado!';
+
+          return 'https://wa.me/5500000000000?text=' + encodeURIComponent(message);
+        }
+
+        function syncWhatsAppBtn() {
+          if (whatsappSubmitBtn) {
+            whatsappSubmitBtn.href = generateWhatsAppUrl();
+          }
+        }
+
+        if (guestsSlider) {
+          guestsSlider.addEventListener('input', function () {
+            updateSimulation();
+            syncWhatsAppBtn();
+          });
+          updateSimulation();
+        }
+
+        if (packageSelect) packageSelect.addEventListener('change', syncWhatsAppBtn);
+        if (durationSelect) durationSelect.addEventListener('change', syncWhatsAppBtn);
+        if (eventDateInput) eventDateInput.addEventListener('input', syncWhatsAppBtn);
+        if (eventCityInput) eventCityInput.addEventListener('input', syncWhatsAppBtn);
+
+        // Also ensure latest values are attached when user clicks the button
+        if (whatsappSubmitBtn) {
+          syncWhatsAppBtn();
+          whatsappSubmitBtn.addEventListener('click', syncWhatsAppBtn);
+        }
+      });
+    </script>
+  </body>
+</html>

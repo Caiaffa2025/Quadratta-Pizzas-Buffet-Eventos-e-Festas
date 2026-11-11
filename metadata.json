@@ -1,0 +1,6 @@
+{
+  "name": "Quadratta Pizzas Eventos e Festas",
+  "description": "Buffet de pizza artesanal redonda feito ao vivo em eventos, casamentos, aniversários e confraternizações.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
