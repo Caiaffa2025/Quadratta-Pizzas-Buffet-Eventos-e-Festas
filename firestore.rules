@@ -1,0 +1,197 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 1. Global Safety Net (Default Deny)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // 2. Reusable Hardened Primitives
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedUser() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isBootstrappedAdmin() {
+      return isVerifiedUser() && request.auth.token.email == 'scaiaffa2014@gmail.com';
+    }
+
+    function isAdmin() {
+      return isVerifiedUser() && (
+        isBootstrappedAdmin() ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    // 3. Entity Validation Blueprints
+    function isValidPizzaItem(data) {
+      return data.keys().hasAll([
+          'title', 'category', 'description', 'imageUrl',
+          'order', 'active', 'updatedBy', 'createdAt', 'updatedAt'
+        ]) &&
+        data.keys().hasOnly([
+          'title', 'category', 'description', 'badge', 'badgeTone',
+          'tagLeft', 'tagRight', 'imageUrl', 'order', 'active',
+          'updatedBy', 'createdAt', 'updatedAt'
+        ]) &&
+        data.title is string && data.title.size() >= 2 && data.title.size() <= 100 &&
+        data.category in ['mais-pedidas', 'tradicionais', 'gourmet', 'doces'] &&
+        data.description is string && data.description.size() >= 5 && data.description.size() <= 500 &&
+        (!('badge' in data) || (data.badge is string && data.badge.size() <= 60)) &&
+        (!('badgeTone' in data) || (data.badgeTone in ['red', 'gold'])) &&
+        (!('tagLeft' in data) || (data.tagLeft is string && data.tagLeft.size() <= 60)) &&
+        (!('tagRight' in data) || (data.tagRight is string && data.tagRight.size() <= 60)) &&
+        data.imageUrl is string && data.imageUrl.size() >= 1 && data.imageUrl.size() <= 2048 &&
+        (data.order is int || data.order is float) && data.order >= 0 && data.order <= 10000 &&
+        data.active is bool &&
+        data.updatedBy is string && data.updatedBy.size() <= 128 && data.updatedBy == request.auth.uid &&
+        data.createdAt is timestamp &&
+        data.updatedAt is timestamp;
+    }
+
+    function isValidMediaAsset(data) {
+      return data.keys().hasAll([
+          'name', 'mimeType', 'dataUrl', 'sizeBytes', 'uploadedBy', 'createdAt'
+        ]) &&
+        data.keys().hasOnly([
+          'name', 'mimeType', 'dataUrl', 'sizeBytes', 'uploadedBy', 'createdAt'
+        ]) &&
+        data.name is string && data.name.size() >= 1 && data.name.size() <= 120 &&
+        data.mimeType in ['image/jpeg', 'image/webp', 'image/png'] &&
+        data.dataUrl is string && data.dataUrl.size() >= 20 && data.dataUrl.size() <= 450000 &&
+        (data.sizeBytes is int || data.sizeBytes is float) && data.sizeBytes > 0 && data.sizeBytes <= 450000 &&
+        data.uploadedBy is string && data.uploadedBy.size() <= 128 && data.uploadedBy == request.auth.uid &&
+        data.createdAt is timestamp;
+    }
+
+    function isValidSocialLink(item) {
+      return item is map &&
+        item.keys().hasAll(['id', 'platform', 'label', 'url', 'active']) &&
+        item.keys().hasOnly(['id', 'platform', 'label', 'url', 'active']) &&
+        item.id is string && item.id.size() >= 1 && item.id.size() <= 64 &&
+        item.platform is string && item.platform.size() >= 1 && item.platform.size() <= 32 &&
+        item.label is string && item.label.size() >= 1 && item.label.size() <= 60 &&
+        item.url is string && item.url.size() >= 1 && item.url.size() <= 512 &&
+        item.active is bool;
+    }
+
+    function isValidSiteSettings(data) {
+      return data.keys().hasAll([
+          'heroImageUrl', 'deliveryImageUrl', 'announcementText',
+          'whatsappNumber', 'whatsappDisplay', 'contactEmail',
+          'socialLinks', 'updatedBy', 'createdAt', 'updatedAt'
+        ]) &&
+        data.keys().hasOnly([
+          'heroImageUrl', 'deliveryImageUrl', 'announcementText',
+          'whatsappNumber', 'whatsappDisplay', 'contactEmail',
+          'socialLinks', 'updatedBy', 'createdAt', 'updatedAt'
+        ]) &&
+        data.heroImageUrl is string && data.heroImageUrl.size() >= 1 && data.heroImageUrl.size() <= 2048 &&
+        data.deliveryImageUrl is string && data.deliveryImageUrl.size() >= 1 && data.deliveryImageUrl.size() <= 2048 &&
+        data.announcementText is string && data.announcementText.size() >= 1 && data.announcementText.size() <= 220 &&
+        data.whatsappNumber is string && data.whatsappNumber.size() >= 8 && data.whatsappNumber.size() <= 20 && data.whatsappNumber.matches('^[0-9]{8,20}$') &&
+        data.whatsappDisplay is string && data.whatsappDisplay.size() >= 5 && data.whatsappDisplay.size() <= 40 &&
+        data.contactEmail is string && data.contactEmail.size() >= 5 && data.contactEmail.size() <= 120 &&
+        data.socialLinks is list && data.socialLinks.size() <= 12 &&
+        (data.socialLinks.size() == 0 || isValidSocialLink(data.socialLinks[0])) &&
+        data.updatedBy is string && data.updatedBy.size() <= 128 && data.updatedBy == request.auth.uid &&
+        data.createdAt is timestamp &&
+        data.updatedAt is timestamp;
+    }
+
+    function isValidAdminUser(data) {
+      return data.keys().hasAll(['email', 'role', 'createdAt']) &&
+        data.keys().hasOnly(['email', 'role', 'createdAt']) &&
+        data.email is string && data.email.size() >= 5 && data.email.size() <= 120 &&
+        data.role == 'admin' &&
+        data.createdAt is timestamp;
+    }
+
+    // 4. Collection Rules
+    match /pizzas/{pizzaId} {
+      allow get: if isValidId(pizzaId);
+      allow list: if true;
+      allow create: if isSignedIn() &&
+        isValidId(pizzaId) &&
+        isValidPizzaItem(incoming()) &&
+        incoming().createdAt == request.time &&
+        incoming().updatedAt == request.time &&
+        isAdmin();
+      allow update: if isSignedIn() &&
+        isValidId(pizzaId) &&
+        isValidPizzaItem(incoming()) &&
+        isAdmin() &&
+        incoming().createdAt == existing().createdAt &&
+        incoming().updatedAt == request.time &&
+        incoming().diff(existing()).affectedKeys().hasOnly([
+          'title', 'category', 'description', 'badge', 'badgeTone',
+          'tagLeft', 'tagRight', 'imageUrl', 'order', 'active',
+          'updatedBy', 'updatedAt'
+        ]);
+      allow delete: if isSignedIn() && isValidId(pizzaId) && isAdmin();
+    }
+
+    match /media/{mediaId} {
+      allow get: if isValidId(mediaId);
+      allow list: if true;
+      allow create: if isSignedIn() &&
+        isValidId(mediaId) &&
+        isValidMediaAsset(incoming()) &&
+        incoming().createdAt == request.time &&
+        isAdmin();
+      allow update: if false;
+      allow delete: if isSignedIn() && isValidId(mediaId) && isAdmin();
+    }
+
+    match /settings/{settingId} {
+      allow get: if isValidId(settingId) && settingId == 'site';
+      allow list: if false;
+      allow create: if isSignedIn() &&
+        isValidId(settingId) &&
+        settingId == 'site' &&
+        isValidSiteSettings(incoming()) &&
+        incoming().createdAt == request.time &&
+        incoming().updatedAt == request.time &&
+        isAdmin();
+      allow update: if isSignedIn() &&
+        isValidId(settingId) &&
+        settingId == 'site' &&
+        isValidSiteSettings(incoming()) &&
+        isAdmin() &&
+        incoming().createdAt == existing().createdAt &&
+        incoming().updatedAt == request.time &&
+        incoming().diff(existing()).affectedKeys().hasOnly([
+          'heroImageUrl', 'deliveryImageUrl', 'announcementText',
+          'whatsappNumber', 'whatsappDisplay', 'contactEmail',
+          'socialLinks', 'updatedBy', 'updatedAt'
+        ]);
+      allow delete: if false;
+    }
+
+    match /admins/{adminId} {
+      allow get: if isSignedIn() && isValidId(adminId) && (request.auth.uid == adminId || isBootstrappedAdmin());
+      allow list: if false;
+      allow create: if isSignedIn() &&
+        isValidId(adminId) &&
+        isValidAdminUser(incoming()) &&
+        incoming().createdAt == request.time &&
+        isBootstrappedAdmin();
+      allow update, delete: if false;
+    }
+  }
+}

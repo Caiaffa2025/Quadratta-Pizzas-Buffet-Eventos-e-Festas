@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #121212;
+  --color-brand-darker: #0a0a0a;
+  --color-brand-card: #181818;
+  --color-brand-surface: #222222;
+  --color-brand-border: #2e2e2e;
+  --color-brand-red: #C8322B;
+  --color-brand-redHover: #b02a24;
+  --color-brand-gold: #D4AF37;
+  --color-brand-goldLight: #f3cf5a;
+  --color-brand-goldHover: #b89426;
+  --color-brand-cream: #FAF6EE;
+  --color-brand-muted: #9e998e;
+}

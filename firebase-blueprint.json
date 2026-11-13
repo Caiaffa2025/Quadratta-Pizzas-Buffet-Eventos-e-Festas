@@ -1,0 +1,251 @@
+{
+  "entities": {
+    "PizzaItem": {
+      "title": "PizzaItem",
+      "description": "Item de pizza artesanal exibido no cardápio público e gerenciado pelo painel administrativo.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100,
+          "description": "Nome da pizza exibido no card."
+        },
+        "category": {
+          "type": "string",
+          "enum": ["mais-pedidas", "tradicionais", "gourmet", "doces"],
+          "description": "Categoria do cardápio."
+        },
+        "description": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 500,
+          "description": "Descrição dos ingredientes e preparo."
+        },
+        "badge": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Texto opcional do selo de destaque."
+        },
+        "badgeTone": {
+          "type": "string",
+          "enum": ["red", "gold"],
+          "description": "Cor do selo de destaque."
+        },
+        "tagLeft": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Etiqueta inferior esquerda."
+        },
+        "tagRight": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Etiqueta inferior direita."
+        },
+        "imageUrl": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "description": "URL da imagem ou referência media:{id}."
+        },
+        "order": {
+          "type": "number",
+          "description": "Ordem de exibição dentro da categoria."
+        },
+        "active": {
+          "type": "boolean",
+          "description": "Indica se a pizza está visível no cardápio público."
+        },
+        "updatedBy": {
+          "type": "string",
+          "maxLength": 128,
+          "description": "UID do administrador que criou ou atualizou o item."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp de criação do registro."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp da última atualização."
+        }
+      },
+      "required": [
+        "title",
+        "category",
+        "description",
+        "imageUrl",
+        "order",
+        "active",
+        "updatedBy",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "MediaAsset": {
+      "title": "MediaAsset",
+      "description": "Imagem otimizada enviada pelo administrador para uso no cardápio e seções da plataforma.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120,
+          "description": "Nome identificador da imagem."
+        },
+        "mimeType": {
+          "type": "string",
+          "enum": ["image/jpeg", "image/webp", "image/png"],
+          "description": "Tipo MIME suportado."
+        },
+        "dataUrl": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 450000,
+          "description": "Conteúdo da imagem comprimida em Data URL."
+        },
+        "sizeBytes": {
+          "type": "number",
+          "description": "Tamanho aproximado em bytes."
+        },
+        "uploadedBy": {
+          "type": "string",
+          "maxLength": 128,
+          "description": "UID do administrador responsável pelo upload."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp de envio."
+        }
+      },
+      "required": [
+        "name",
+        "mimeType",
+        "dataUrl",
+        "sizeBytes",
+        "uploadedBy",
+        "createdAt"
+      ]
+    },
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "description": "Configurações globais da landing page, banners, contato e links de redes sociais.",
+      "type": "object",
+      "properties": {
+        "heroImageUrl": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "description": "Imagem principal do banner Hero ou media:{id}."
+        },
+        "deliveryImageUrl": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "description": "Imagem da seção Delivery ou media:{id}."
+        },
+        "announcementText": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 220,
+          "description": "Texto da barra superior de avisos."
+        },
+        "whatsappNumber": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 20,
+          "pattern": "^[0-9]{8,20}$",
+          "description": "Número DDI+DDD+Número usado nos links wa.me."
+        },
+        "whatsappDisplay": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 40,
+          "description": "Telefone formatado para exibição no rodapé."
+        },
+        "contactEmail": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 120,
+          "description": "E-mail comercial exibido no rodapé."
+        },
+        "socialLinks": {
+          "type": "array",
+          "description": "Lista limitada (máximo 12 itens) de objetos de redes sociais com id, platform, label, url e active."
+        },
+        "updatedBy": {
+          "type": "string",
+          "maxLength": 128,
+          "description": "UID do administrador que alterou as configurações."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp de criação das configurações."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp da última alteração."
+        }
+      },
+      "required": [
+        "heroImageUrl",
+        "deliveryImageUrl",
+        "announcementText",
+        "whatsappNumber",
+        "whatsappDisplay",
+        "contactEmail",
+        "socialLinks",
+        "updatedBy",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "AdminUser": {
+      "title": "AdminUser",
+      "description": "Registro de administrador autorizado a operar o painel.",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 120,
+          "description": "E-mail verificado do administrador."
+        },
+        "role": {
+          "type": "string",
+          "enum": ["admin"],
+          "description": "Papel administrativo."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp de cadastro."
+        }
+      },
+      "required": ["email", "role", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/pizzas/{pizzaId}": {
+      "schema": { "$ref": "#/entities/PizzaItem" },
+      "description": "Itens do cardápio de pizzas da Quadratta."
+    },
+    "/media/{mediaId}": {
+      "schema": { "$ref": "#/entities/MediaAsset" },
+      "description": "Imagens enviadas pelo painel administrativo."
+    },
+    "/settings/{settingId}": {
+      "schema": { "$ref": "#/entities/SiteSettings" },
+      "description": "Configurações públicas da plataforma e redes sociais (documento 'site')."
+    },
+    "/admins/{adminId}": {
+      "schema": { "$ref": "#/entities/AdminUser" },
+      "description": "Lista de administradores autorizados."
+    }
+  }
+}

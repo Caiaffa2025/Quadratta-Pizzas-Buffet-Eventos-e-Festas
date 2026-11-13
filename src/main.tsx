@@ -1,5 +1,8 @@
-import {createRoot} from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 
-createRoot(document.getElementById('root')!).render(<App />);
+const mountEl = document.getElementById('admin-root') || document.getElementById('root');
+if (mountEl) {
+  createRoot(mountEl).render(<App />);
+}
